@@ -1,4 +1,4 @@
-package main
+package main_1
 
 import (
 	"fmt"
@@ -11,7 +11,7 @@ func chnageCourse(course *string) string {
 	return *course
 }
 
-func main() {
+func main_1() {
 	name := "shankha"
 	course := "askans"
 
