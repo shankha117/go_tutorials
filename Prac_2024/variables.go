@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"reflect"
+	"strconv"
 )
 
 var x = 1234
@@ -26,7 +27,7 @@ func main() {
 
 	a_bhinary := fmt.Sprintf("%b", a_left_shifted_1)
 
-	fmt.Println("Binary Rep of a is ", a_bhinary)
+	fmt.Println("Binary Rep of a is ", a_bhinary, a_left_shifted_1)
 	fmt.Println(a_left_shifted_1)
 
 	const email = "hahahhaha"
@@ -39,8 +40,26 @@ func main() {
 
 	var i int = 42
 
-	i = 3
+	i = 1000
+
+	fmt.Println(string(i))
+
+	i = 42
 
 	fmt.Println(i)
+
+	fmt.Printf(" --- %v %T \n", i, i)
+
+	var j string
+
+	j = strconv.Itoa(i)
+
+	fmt.Printf(" +++ %v %T \n", j, j)
+
+	binary_int := 1100
+
+	dec_str, _ := strconv.ParseInt(strconv.Itoa(binary_int), 2, 64)
+
+	fmt.Println(dec_str, binary_int)
 
 }

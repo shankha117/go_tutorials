@@ -54,4 +54,8 @@ func main() {
 	// var ru rune = "a"
 	// fmt.Printf(" %v, %T \n", ru, ru)
 
+	name := "shankha"
+
+	fmt.Println(rune(name[0]))
+
 }
