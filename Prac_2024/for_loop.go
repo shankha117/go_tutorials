@@ -45,4 +45,16 @@ func main() {
 
 	}
 
+	for i := range 3 {
+		fmt.Println(" TIS IS GOO nO", i)
+	}
+
+	lo := 2
+
+	for lo <= 10 {
+		fmt.Println(lo)
+
+		lo = lo + lo
+	}
+
 }

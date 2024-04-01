@@ -2,11 +2,16 @@ package main
 
 import (
 	"fmt"
+	"math"
 	"math/rand"
 	"reflect"
 	"strings"
 	"time"
 )
+
+type Circle struct {
+	x, y, r float64
+}
 
 type Doctor struct {
 	num        int
@@ -153,4 +158,27 @@ func main() {
 
 	}
 
+	// Methods
+
+	cir := Circle{0, 0, 5}
+	fmt.Printf("Area of Circle %v \n", circleArea(cir))
+
+	// pass the pointer
+	fmt.Printf("Area of Circle %v \n", circleAreaP(&cir))
+
+	// use the method
+	fmt.Printf("Area of Circle %v \n", cir.area())
+
+}
+
+func circleArea(c Circle) float64 {
+	return math.Pi * c.r * c.r
+}
+
+func circleAreaP(c *Circle) float64 {
+	return math.Pi * c.r * c.r
+}
+
+func (c *Circle) area() float64 {
+	return math.Pi * c.r * c.r
 }
