@@ -1,0 +1,15 @@
+	// for i := range ch {
+
+	// 	fmt.Printf("RECEIVING %v \n", i)
+
+	// }
+
+	for {
+		if i, ok := <-ch; ok {
+			fmt.Printf("RECEIVING %v \n", i)
+		} else {
+			fmt.Println(" channel closed")
+			break
+
+		}
+	}
